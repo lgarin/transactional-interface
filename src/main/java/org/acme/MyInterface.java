@@ -5,9 +5,9 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.QueryParam;
 
-public interface Greeting {
+public interface MyInterface {
 
-	void nonTransactionalMethod(@QueryParam("field") String field);
+	void nonTransactionalMethod(String field);
 	
 	@POST
     @Path("/createDefault")
