@@ -32,5 +32,5 @@ The `@Transactional` annotation on default methods is ignored and persisting an 
 ## Reproducer
 
 This projects includes two unit tests in the class `MyResourceTest`.
-- `testTransactionEndpoint` uses an endpoint implemented by a class method. This tests
-- `testDefaultTransactionEndpoint` uses an endpoint implemented by a default method.
+- `testTransactionEndpoint` uses an endpoint implemented by a class method. This test correctly stores a new entity in a new transaction.
+- `testDefaultTransactionEndpoint` uses an endpoint implemented by a default method. This test fails to store a new entity because no transaction has been started.
